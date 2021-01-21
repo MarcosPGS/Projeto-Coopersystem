@@ -11,16 +11,19 @@ import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatDialogModule} from '@angular/material/dialog';
+import { CurrencyMaskModule } from 'ng2-currency-mask';
 import { LOCALE_ID } from '@angular/core';
 import localePt from '@angular/common/locales/pt';
 import {registerLocaleData} from '@angular/common';
+import { ModalResgateComponent } from './modal-resgate/modal-resgate.component';
 registerLocaleData(localePt);
 
 
 
 
 @NgModule({
-  declarations: [ResgateConsultaComponent, ResgateDetalheComponent],
+  declarations: [ResgateConsultaComponent, ResgateDetalheComponent, ModalResgateComponent],
   imports: [
   CommonModule,
     MatTableModule,
@@ -31,8 +34,10 @@ registerLocaleData(localePt);
     MatInputModule,
     MatFormFieldModule,
     FormsModule,
-    ReactiveFormsModule
-  ], exports: [ResgateConsultaComponent, ResgateDetalheComponent],
+    ReactiveFormsModule,
+    MatDialogModule,
+    CurrencyMaskModule
+  ], exports: [ResgateConsultaComponent, ResgateDetalheComponent, ModalResgateComponent],
   providers: [ ResgateService, {provide: LOCALE_ID,
     useValue: 'pt-BR'}]
 })

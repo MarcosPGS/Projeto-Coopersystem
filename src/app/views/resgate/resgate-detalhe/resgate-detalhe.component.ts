@@ -4,7 +4,9 @@ import { Investimentos } from 'src/app/core/template/modal/investimentos';
 import { MatTableDataSource } from '@angular/material/table';
 import { Acoes } from '../../../core/template/modal/acoes';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 import Swal from 'sweetalert2';
+import { ModalResgateComponent } from '../modal-resgate/modal-resgate.component';
 
 
 @Component({
@@ -20,7 +22,7 @@ export class ResgateDetalheComponent implements OnInit{
   formulario: FormGroup;
   valorTotalAuxiliar = [];
   valorTotal = 0;
-  constructor(private router: Router, private activatedRoute: ActivatedRoute,  private fb: FormBuilder, ) {}
+  constructor(private router: Router, private activatedRoute: ActivatedRoute,  private fb: FormBuilder, public dialog: MatDialog, ) {}
 
 
   ngOnInit(): void {
@@ -37,6 +39,23 @@ export class ResgateDetalheComponent implements OnInit{
     });
   }
 
+  confirmar(): void {
+    const valor = 1;
+    if (valor > 0) {
+      this.dialog.open(ModalResgateComponent, {});
+    }
+
+    if (valor <= 0) {
+      Swal.fire({
+        position: 'center',
+        icon: 'warning',
+        title: '<strong>Oops...</strong>',
+        text: 'Preencher os valores a resgatar da forma que deseja!',
+        showConfirmButton: false,
+        timer: 4000
+      });
+    }
+  }
 
   onEvent(objeto: any, $event): void {
     this.valorTotal = 0;
