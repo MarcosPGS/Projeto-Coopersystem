@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { RegateService } from './regate.service';
+import { ResgateService } from './resgate.service';
 
-describe('RegateService', () => {
-  let service: RegateService;
+describe('ResgateService', () => {
+  let service: ResgateService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(RegateService);
+    service = TestBed.inject(ResgateService);
   });
 
   it('should be created', () => {

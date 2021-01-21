@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RegateDetalhesComponent } from './regate-detalhes.component';
+import { ResgateDetalheComponent } from './resgate-detalhe.component';
 
-describe('RegateDetalhesComponent', () => {
-  let component: RegateDetalhesComponent;
-  let fixture: ComponentFixture<RegateDetalhesComponent>;
+describe('ResgateDetalheComponent', () => {
+  let component: ResgateDetalheComponent;
+  let fixture: ComponentFixture<ResgateDetalheComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RegateDetalhesComponent ]
+      declarations: [ ResgateDetalheComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RegateDetalhesComponent);
+    fixture = TestBed.createComponent(ResgateDetalheComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

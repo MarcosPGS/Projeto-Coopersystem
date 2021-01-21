@@ -1,0 +1,9 @@
+.mat-header-cell{
+    text-align: start;
+}
+.mat-cell{
+    text-align: start;
+}
+.mat-table{
+    width: 100%;
+}
