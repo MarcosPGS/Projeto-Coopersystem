@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { Investimentos } from '../../../core/template/modal/investimentos';
-import { RetornoDados } from '../../../core/template/modal/retorno';
 import { ResgateService } from '../resgate.service';
 
 @Component({

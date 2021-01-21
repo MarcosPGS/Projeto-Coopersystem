@@ -11,7 +11,7 @@ export class ResgateService {
 
   HOST: string;
   URL: string;
-  PATH = '/v2/5e76797e2f0000f057986099';
+  PATH = '/v3/1c7e1b35-426a-4677-b26f-9a7ce2d75fe1';
 
   constructor(private http: HttpClient) {
     this.HOST = environment.apiUrl;
