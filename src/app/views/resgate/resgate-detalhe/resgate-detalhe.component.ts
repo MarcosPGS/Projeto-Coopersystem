@@ -7,8 +7,6 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import Swal from 'sweetalert2';
 import { ModalResgateComponent } from '../modal-resgate/modal-resgate.component';
-import { Subject } from 'rxjs';
-import { debounceTime } from 'rxjs/operators';
 
 
 

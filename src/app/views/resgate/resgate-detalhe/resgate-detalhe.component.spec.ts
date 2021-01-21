@@ -34,4 +34,12 @@ describe('ResgateDetalheComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('Deve testar a funcao voltar', () => {
+    expect(component.voltar()).toBe();
+  });
+
+  it('Deve testar a funcao confirmar', () => {
+    expect(component.confirmar()).toBe();
+  });
 });
