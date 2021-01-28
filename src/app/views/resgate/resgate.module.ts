@@ -13,6 +13,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatDialogModule} from '@angular/material/dialog';
 import { CurrencyMaskModule } from 'ng2-currency-mask';
+import { CustomFormsModule } from 'ng2-validation';
 import { LOCALE_ID } from '@angular/core';
 import localePt from '@angular/common/locales/pt';
 import {registerLocaleData} from '@angular/common';
@@ -36,7 +37,8 @@ registerLocaleData(localePt);
     FormsModule,
     ReactiveFormsModule,
     MatDialogModule,
-    CurrencyMaskModule
+    CurrencyMaskModule,
+    CustomFormsModule
   ], exports: [ResgateConsultaComponent, ResgateDetalheComponent, ModalResgateComponent],
   providers: [ ResgateService, {provide: LOCALE_ID,
     useValue: 'pt-BR'}]
